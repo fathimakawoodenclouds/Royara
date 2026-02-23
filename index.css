@@ -24,6 +24,8 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 75%;
+    /* Logically scales all 'rem' values down exactly to the 75% zoom preference */
 }
 
 body {
@@ -94,13 +96,14 @@ nav {
     border-bottom: 1px solid rgba(197, 160, 89, 0.1);
     z-index: 1000;
     transition: var(--transition-premium);
-    height: 150px;
-    /* Increased for ultimate impact */
+    height: 9.375rem;
+    /* 150px */
 }
 
 nav.scrolled {
     padding: 0.1rem 10%;
-    height: 110px;
+    height: 6.875rem;
+    /* 110px */
     background: var(--glass);
     /* Glass effect on scroll */
     backdrop-filter: blur(15px);
@@ -109,15 +112,17 @@ nav.scrolled {
 }
 
 .nav-logo {
-    height: 200px;
-    /* Maximized height */
-    width: 400px;
+    height: 12.5rem;
+    /* 200px */
+    width: 25rem;
+    /* 400px */
     object-fit: contain;
     transition: var(--transition-premium);
 }
 
 nav.scrolled .nav-logo {
-    height: 135px;
+    height: 8.4375rem;
+    /* 135px */
 }
 
 .nav-links {
@@ -370,6 +375,8 @@ section {
 .about-text {
     position: relative;
     z-index: 2;
+    max-width: 35rem;
+    margin-left: auto;
 }
 
 .about-text h2 {
@@ -378,19 +385,6 @@ section {
     line-height: 1.3;
 }
 
-/* Logical fix for text readability over the large corner accent image */
-@media (min-width: 1025px) and (max-width: 1780px) {
-    .about-text {
-        background: rgba(253, 251, 247, 0.85);
-        /* var(--warm-silk) with opacity */
-        padding: 2.5rem;
-        border-radius: 16px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-        margin-left: -2.5rem;
-        /* Offset padding to keep text aligned with container */
-    }
-}
 
 /* Cards Overlay Style */
 .card-stack {
@@ -487,7 +481,8 @@ section {
 }
 
 .product-img-wrapper {
-    height: 350px;
+    height: 21.875rem;
+    /* 350px */
     overflow: hidden;
     position: relative;
 }
@@ -518,7 +513,8 @@ section {
 
 .corner-accent {
     position: absolute;
-    width: 1100px;
+    width: 68.75rem;
+    /* 1100px */
     z-index: -1;
     pointer-events: none;
     opacity: 0;
@@ -527,15 +523,19 @@ section {
 }
 
 .bridge-accent {
-    top: -550px;
-    left: -200px;
+    top: -34.375rem;
+    /* -550px */
+    left: -12.5rem;
+    /* -200px; anchored to the left side */
+    right: auto;
+    /* Clear default right alignment */
     transform: translate(-50px, -50px) rotate(-10deg);
 }
 
 .corner-accent.active {
     opacity: 1;
     transform: translate(0, 0) rotate(0deg);
-    animation: floating-accent 6s ease-in-out infinite alternate 1.5s;
+    /* animation: floating-accent 6s ease-in-out infinite alternate 1.5s; Removed to satisfy "dont move the image" */
 }
 
 @keyframes floating-accent {
@@ -564,6 +564,9 @@ section {
     border-radius: 0;
     overflow: hidden;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    max-width: 70rem;
+    /* reduced from full 1200px container width */
+    margin: 0 auto;
 }
 
 .grade-panel {
@@ -595,6 +598,7 @@ section {
 /* Base Panel Typography */
 .grade-panel-header {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .grade-panel h3 {
@@ -611,6 +615,7 @@ section {
     font-size: 1.15rem;
     line-height: 1.8;
     margin-bottom: 3rem;
+    text-align: justify;
 }
 
 .grade-features {
@@ -694,8 +699,8 @@ section {
 
 .packaging-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    /* Increased from 1.2fr to make image larger */
+    grid-template-columns: 1fr 1.2fr;
+    /* Adjusted grid to give text column slightly more space */
     gap: 6rem;
     /* Slightly reduced gap to give more room for the image */
     align-items: center;
@@ -703,28 +708,27 @@ section {
 
 .packaging-image img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     border-radius: 20px;
-    filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.25));
-    /* Enhanced shadow for floating effect */
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
     animation: floatBag 6s ease-in-out infinite;
-    /* Continuous floating animation */
-    transform: scale(1.3) translateY(20px);
-    /* Significantly increase size and shift downwards */
-    transform-origin: top center;
+    transform-origin: center;
+    margin: 0 auto;
+    display: block;
 }
 
 @keyframes floatBag {
     0% {
-        transform: scale(1.3) translateY(20px);
+        transform: translateY(0px);
     }
 
     50% {
-        transform: scale(1.3) translateY(0px);
+        transform: translateY(-15px);
     }
 
     100% {
-        transform: scale(1.3) translateY(20px);
+        transform: translateY(0px);
     }
 }
 
@@ -735,17 +739,17 @@ section {
 .packaging-content .section-title {
     margin-bottom: 2.5rem;
     text-align: left;
-    white-space: nowrap;
-    /* Forces single line on desktop */
+    white-space: normal;
+    font-size: 3rem;
+    /* Allows wrapping, matches new layout */
 }
 
 .packaging-text {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
-    line-height: 2;
+    line-height: 2.2;
     text-align: justify;
-    /* Justify text as requested */
 }
 
 .packaging-features {
@@ -771,8 +775,8 @@ section {
 
 .feature-item span {
     font-weight: 600;
-    color: var(--royal-green);
-    font-size: 1.1rem;
+    color: var(--royal-green-dark);
+    font-size: 1rem;
 }
 
 @media (max-width: 992px) {
@@ -827,7 +831,8 @@ footer::before {
 }
 
 .footer-logo {
-    height: 200px;
+    height: 12.5rem;
+    /* 200px */
     margin-top: -2.5rem;
     /* Align top with headers */
     margin-bottom: 0.5rem;
@@ -894,6 +899,11 @@ footer::before {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
+    }
+
+    .about-text {
+        margin-left: 0;
+        max-width: 100%;
     }
 
     .hero h1 {
