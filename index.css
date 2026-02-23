@@ -1035,3 +1035,29 @@ footer::before {
         padding: 4rem 5% 2rem;
     }
 }
+
+/* Specific fix for text readability overlap between 1025px and 1370px */
+@media (min-width: 1025px) and (max-width: 1370px) {
+    .bridge-accent {
+        left: -18rem;
+        /* Keep image partially visible */
+        transform: translate(-50px, -20px) rotate(-10deg) scale(0.85);
+        /* Proper scaling and position */
+    }
+
+    .about-text {
+        max-width: 42rem;
+        background: rgba(253, 251, 247, 0.85);
+        /* Match warm-silk body color with 85% opacity */
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: 3rem;
+        border-radius: 24px;
+        /* Rounded corners like a premium card */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        /* Gentle shadow to separate it from the image */
+        position: relative;
+        z-index: 5;
+        /* Ensure card stacks completely over the background image */
+    }
+}
