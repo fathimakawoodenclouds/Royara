@@ -129,8 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = lang;
         localStorage.setItem('royara_lang', lang);
 
-        // Update toggle button text if needed
-        langToggle.textContent = lang === 'en' ? 'AR' : 'EN';
+        // Update toggle button text and flag
+        const toggleText = lang === 'en' ? 'AR' : 'EN';
+        const toggleFlag = lang === 'en' ? 'uae-flag.svg' : 'uk-flag.svg';
+        langToggle.innerHTML = `${toggleText} <img src="assets/${toggleFlag}" alt="${toggleText} Flag" class="nav-flag">`;
 
         // Translate elements
         document.querySelectorAll('[data-i18n]').forEach(el => {

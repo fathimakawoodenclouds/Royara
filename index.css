@@ -118,11 +118,14 @@ nav.scrolled {
     /* 400px */
     object-fit: contain;
     transition: var(--transition-premium);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 5px rgba(255, 255, 255, 1));
 }
 
 nav.scrolled .nav-logo {
     height: 8.4375rem;
     /* 135px */
+    filter: none;
+    /* Remove glow when scrolled as background is white/glass */
 }
 
 .nav-links {
@@ -141,7 +144,16 @@ nav.scrolled .nav-logo {
     position: relative;
     transition: var(--transition-premium);
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    /* Added glow for readability */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-flag {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
 }
 
 .hamburger {
@@ -535,7 +547,7 @@ section {
 .corner-accent.active {
     opacity: 1;
     transform: translate(0, 0) rotate(0deg);
-    /* animation: floating-accent 6s ease-in-out infinite alternate 1.5s; Removed to satisfy "dont move the image" */
+    animation: floating-accent 6s ease-in-out infinite alternate 1.8s;
 }
 
 @keyframes floating-accent {
@@ -843,6 +855,7 @@ footer::before {
 .footer-brand p {
     color: var(--white);
     opacity: 0.9;
+    font-size: 1.1rem;
 }
 
 .footer-links ul {
@@ -857,9 +870,10 @@ footer::before {
 .footer-contact h3 {
     color: var(--metallic-gold);
     /* Golden headers for premium look */
+    font-size: 2rem;
     margin-bottom: 2rem;
     position: relative;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 
 .footer-links h3::after,
@@ -868,30 +882,39 @@ footer::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 30px;
+    width: 45px;
     height: 2px;
     background: var(--metallic-gold);
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--white);
+    opacity: 0.9;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: var(--transition-premium);
 }
 
 .footer-links a:hover {
     color: var(--metallic-gold);
+    opacity: 1;
     padding-left: 10px;
 }
 
 .footer-contact p {
     color: var(--white);
+    opacity: 0.9;
+    font-size: 1.1rem;
     margin-bottom: 1.2rem;
+    display: flex;
+    align-items: flex-start;
 }
 
 .footer-contact i {
     margin-right: 15px;
     color: var(--white);
+    flex-shrink: 0;
+    margin-top: 0.4rem;
 }
 
 /* Responsive */
