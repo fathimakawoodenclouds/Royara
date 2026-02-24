@@ -119,7 +119,7 @@ const translations = {
         "footer_address": "منطقة إيدوكي، ولاية كيرالا، الهند",
         "footer_phone": "+91 9947789955",
         "footer_email": "royaraofficial@gmail.com",
-        "footer_credits": "تم التصميم بواسطة Woodenclouds pvt Ltd"
+        "footer_credits": "Designed by Woodenclouds Pvt. Ltd."
     }
 };
 
