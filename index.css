@@ -1271,6 +1271,10 @@ footer::before {
 }
 
 @media (max-width: 768px) {
+    .splash-text {
+        margin-top: -1rem;
+    }
+
     nav {
         padding: 1rem 5%;
         /* Shrink side padding to move logo and hamburger slightly inward */
@@ -1281,9 +1285,9 @@ footer::before {
     }
 
     .nav-logo {
-        height: 5rem;
+        height: 15rem;
         width: auto;
-        margin-left: -1rem;
+        margin-left: -6rem;
         filter: none;
         /* Remove white shadow on mobile */
     }
