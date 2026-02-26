@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <img src="assets/logo1.png" alt="Royara Logo" class="splash-logo">
+        <p class="splash-text" data-i18n="hero_subtitle">Premium Indian Cardamom Sourced From the Heart of Idukki</p>
+        <div class="splash-loader">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
 
     <!-- Sticky Navigation -->
     <nav id="navbar">
@@ -30,14 +40,14 @@
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="slider-container">
-            <div class="slide" style="background-image: url('assets/spices.png');"></div>
-            <div class="slide" style="background-image: url('assets/cardamom.png');"></div>
-            <div class="slide" style="background-image: url('assets/banner3.png');"></div>
+            <div class="slide" style="background-image: url('assets/dried_pepper.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/img3.jpeg');"></div>
+            <div class="slide" style="background-image: url('assets/img2.jpeg');"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="reveal" data-i18n="hero_title">Exceptional Aroma. <br>Royal Heritage.</h1>
-            <p class="reveal" data-i18n="hero_subtitle">Premium Indian Cardamom Sourced From the Heart of Idukki</p>
+            <p class="reveal" data-i18n="hero_subtitle">Sourced From the Heart of Idukki</p>
             <a href="#products" class="btn-premium reveal" data-i18n="hero_btn">Discover Our Collection</a>
         </div>
     </header>
@@ -82,7 +92,7 @@
         </div>
         <div class="container relative-z">
             <div class="choose-header reveal">
-                <span class="section-tag" data-i18n="choose_tag">Why Royara</span>
+                <span class="section-tag" data-i18n="choose_tag">What Makes Royara Special ?</span>
                 <p class="choose-subtitle" data-i18n="choose_subtitle" style="margin-top: 1rem;">Quality, Trust and
                     Expertise in Cardamom trading and farming</p>
             </div>
@@ -92,22 +102,16 @@
                     <div class="choose-icon-wrapper">
                         <i class="fa-solid fa-medal"></i>
                     </div>
-                    <h3 data-i18n="choose_card1_title">40 Years</h3>
-                    <p data-i18n="choose_card1_p">40 Years of legacy and expertise in Cardamom farming</p>
+                    <h3 data-i18n="choose_card1_title">15 Years</h3>
+                    <p data-i18n="choose_card1_p">15 Years of legacy and expertise in Cardamom farming</p>
                 </div>
-                <div class="choose-card reveal" style="transition-delay: 0.3s;">
-                    <div class="choose-icon-wrapper">
-                        <i class="fa-solid fa-ship"></i>
-                    </div>
-                    <h3 data-i18n="choose_card2_title">Pioneer Exporter</h3>
-                    <p data-i18n="choose_card2_p">Cardamom from India's Pioneer Exporter</p>
-                </div>
+
                 <div class="choose-card reveal" style="transition-delay: 0.5s;">
                     <div class="choose-icon-wrapper">
                         <i class="fa-solid fa-trophy"></i>
                     </div>
                     <h3 data-i18n="choose_card3_title">Award Winner</h3>
-                    <p data-i18n="choose_card3_p">Largest Exporter Award Winner for past many years</p>
+                    <p data-i18n="choose_card3_p">Largest Trader Award Winner for past many years</p>
                 </div>
             </div>
         </div>
@@ -146,6 +150,13 @@
 
     <!-- Packaging Section -->
     <section class="packaging" id="packaging">
+        <!-- Floating Accent Leaves -->
+        <img src="assets/img5.png" alt="" class="floating-leaf leaf-1">
+        <img src="assets/img5.png" alt="" class="floating-leaf leaf-2">
+        <img src="assets/img5.png" alt="" class="floating-leaf leaf-3">
+        <img src="assets/img5.png" alt="" class="floating-leaf leaf-4">
+        <img src="assets/img5.png" alt="" class="floating-leaf leaf-5">
+
         <!-- Floating Animated Cardamom (Right) -->
         <div class="packaging-accent-wrapper reveal reveal-right" data-paroller-factor="0.5"
             data-paroller-type="foreground" style="transform: translateY(85px);">
@@ -251,6 +262,13 @@
                     <p><i class="fa-solid fa-envelope"></i> <span
                             data-i18n="footer_email">royaraofficial@gmail.com</span></p>
                 </div>
+                <div class="footer-map">
+                    <h3 data-i18n="footer_map_title">Find Us</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3932.392987926712!2d77.18061637502764!3d9.732739690359466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNDMnNTcuOSJOIDc3wrAxMCc1OS41IkU!5e0!3m2!1sen!2sin!4v1772106673307!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
             <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
                 <p>&copy; 2026 Royara Official. <span data-i18n="footer_credits">Designed by Woodenclouds Pvt
@@ -264,6 +282,18 @@
 
     <!-- Simple Scroll Reveal Script -->
     <script>
+        // Splash Screen Logic
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                if (splash) {
+                    splash.classList.add('hidden');
+                    // Optional: remove from DOM after transition completes
+                    setTimeout(() => splash.remove(), 1000);
+                }
+            }, 2500); // 2.5 seconds delay
+        });
+
         const observerOptions = {
             threshold: 0.1
         };
@@ -279,13 +309,23 @@
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
         // Navbar Scroll Effect
+        let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
+
+                // Hide on scroll down, show on scroll up
+                if (window.scrollY > lastScrollY) {
+                    nav.classList.add('hide');
+                } else {
+                    nav.classList.remove('hide');
+                }
             } else {
                 nav.classList.remove('scrolled');
+                nav.classList.remove('hide'); // Always show at the top
             }
+            lastScrollY = window.scrollY;
         });
 
         // Hamburger Menu Toggle
