@@ -948,8 +948,7 @@ section {
     }
 
     .packaging-text {
-        text-align: center;
-        /* Center text on mobile instead of justify for better look */
+        text-align: justify;
     }
 
     .feature-item {
@@ -1067,7 +1066,7 @@ section {
     }
 
     .why-choose-desc {
-        text-align: center;
+        text-align: justify;
     }
 
     .why-choose-features {
@@ -1343,7 +1342,6 @@ footer::before {
     .why-choose-split {
         grid-template-columns: 1fr;
         gap: 3rem;
-        text-align: center;
     }
 
     .why-choose-title {
@@ -1485,8 +1483,8 @@ footer::before {
     }
 
     section {
-        padding: 4rem 1.25rem;
-        /* Crucial: very small side padding for 320px screens */
+        padding: 4rem 7%;
+        /* Added side gap for better breathing room on small screens */
     }
 
     .grade-panel {
