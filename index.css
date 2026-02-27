@@ -1308,6 +1308,12 @@ footer::before {
     margin-top: 0.4rem;
 }
 
+.footer-marketing {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .footer-map iframe {
     width: 100%;
     height: 220px;
@@ -1368,6 +1374,16 @@ footer::before {
 
     .feature-box:last-child {
         border-bottom: none;
+    }
+
+    .why-choose-us-final {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .our-grades-preview {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
     }
 
     /* Mobile scaling for background assets */
@@ -1483,8 +1499,8 @@ footer::before {
     }
 
     section {
-        padding: 4rem 7%;
-        /* Added side gap for better breathing room on small screens */
+        padding: 3rem 7%;
+        /* Reduced vertical padding and kept side gap */
     }
 
     .grade-panel {
@@ -1502,6 +1518,12 @@ footer::before {
 
     footer {
         padding: 4rem 5% 2rem;
+    }
+
+    .footer-marketing {
+        font-size: 0.9rem !important;
+        white-space: nowrap;
+        display: block !important;
     }
 }
 
