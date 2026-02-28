@@ -13,7 +13,11 @@
 <body>
     <!-- Splash Screen -->
     <div id="splash-screen" class="splash-screen">
-        <img src="assets/logo1.png" alt="Royara Logo" class="splash-logo">
+        <div style="position: relative; display: inline-block;">
+            <img src="assets/logo1.png" alt="Royara Logo" class="splash-logo" style="margin-bottom: 0;">
+            <i class="fa-solid fa-trademark"
+                style="position: absolute; right: 32%; top: 37%; font-size: 1.2rem; color: #00371f;"></i>
+        </div>
         <p class="splash-text" data-i18n="hero_subtitle">Premium Indian Cardamom Sourced From the Heart of Idukki</p>
         <div class="splash-loader">
             <span class="dot"></span>
@@ -24,7 +28,11 @@
 
     <!-- Sticky Navigation -->
     <nav id="navbar">
-        <img src="assets/logo1.png" alt="Royara Logo" class="nav-logo">
+        <div style="position: relative; display: inline-block;">
+            <img src="assets/logo1.png" alt="Royara Logo" class="nav-logo">
+            <i class="fa-solid fa-trademark nav-tm"
+                style="position: absolute; right: 30%; top: 35%; font-size: 0.8rem; color: #00371f;"></i>
+        </div>
         <div class="hamburger" id="hamburger">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -59,7 +67,7 @@
             <div class="about-grid">
                 <div class="about-text reveal reveal-left">
                     <h2 data-i18n="about_heading">Bringing Indian Aroma to the World</h2>
-                    <p data-i18n="about_p">Royara is a passionate cardamom export agency bringing the true aroma of
+                    <p data-i18n="about_p">Royara is a passionate cardamom export brand bringing the true aroma of
                         premium Indian spices to
                         international markets. We source directly from trusted farmers in Kerala to ensure freshness,
                         rich flavor, and uncompromising purity.</p>
@@ -138,7 +146,7 @@
                 <p class="preview-text" data-i18n="grades_detailed_desc">At Royara, every cardamom pod undergoes a
                     rigorous selection process. We classify our spices based on diameter, vibrant green color, and
                     intense aroma profile to meet stringent international standards. Whether you need the premium 8mm
-                    pods or the standard 6mm size, we guarantee consistency in every batch.</p>
+                    pods, the 7mm, or the standard 6mm size, we guarantee consistency in every batch.</p>
             </div>
 
             <div class="preview-visual reveal reveal-right" style="transition-delay: 0.2s;">
@@ -230,7 +238,7 @@
                 </div>
                 <div class="product-card reveal">
                     <div class="product-img-wrapper">
-                        <img src="assets/spices.png" alt="Exotic Spices">
+                        <img src="assets/spices_img.png" alt="Exotic Spices">
                     </div>
                     <div class="product-info">
                         <h3 data-i18n="prod_card3_title">Heritage Spices</h3>
@@ -247,13 +255,28 @@
         <div class="container">
             <div class="footer-grid reveal">
                 <div class="footer-brand">
-                    <img src="assets/royara_logo.png" alt="Royara Logo" class="footer-logo">
+                    <div style="position: relative; display: inline-block;">
+                        <img src="assets/royara_logo.png" alt="Royara Logo" class="footer-logo">
+                        <i class="fa-solid fa-trademark"
+                            style="position: absolute; right: 22%; top: 12%; font-size: 0.8rem; color: #ffffff;"></i>
+                    </div>
                     <p data-i18n="footer_brand_p">Exporters of Premium Green Cardamom and Indian Spices.
                         Bringing quality heritage to
                         every corner of the globe.</p>
+                    <div class="social-icons" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; margin-left: 5rem;"
+                        id="footer-socials">
+                        <a href="https://www.instagram.com/royara._?igsh=ZzYzdmIzdzV2dHg3" target="_blank"
+                            style="color: #ffffff; font-size: 2.2rem; transition: color 0.3s;"
+                            onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#ffffff'"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1FXxj3PjBG/" target="_blank"
+                            style="color: #ffffff; font-size: 2.2rem; transition: color 0.3s;"
+                            onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#ffffff'"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n="footer_links_title">Quick Links</h3>
+                    <h3 data-i18n="footer_links_title">Links</h3>
                     <ul>
                         <li><a href="#home" data-i18n="footer_nav_home">Home</a></li>
                         <li><a href="#about" data-i18n="footer_nav_about">About Royara</a></li>
@@ -262,13 +285,15 @@
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h3 data-i18n="footer_contact_title">Contact</h3>
-                    <p class="footer-marketing" data-i18n="footer_marketing" style="margin-bottom: 1rem;">
-                        Marketed and Packed by Green Leaf trading company</p>
-                    <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer_address">12/640 White House
+                    <h3 data-i18n="footer_contact_title" class="footer-contact-heading">Contact</h3>
+                    <p class="footer-marketing" style="margin-bottom: 1rem;">
+                        <span data-i18n="footer_marketing">Marketed and Packed by</span>
+                    </p>
+                    <p><i class="fa-solid fa-location-dot fa-fw"></i> <span data-i18n="footer_address">Green Leaf
+                            Trading Company,<br>12/640 White House
                             Bldg., Chettukuzhy, Vandamedu, Idukki-685552, Kerala, India</span></p>
-                    <p><i class="fa-solid fa-phone"></i> <span data-i18n="footer_phone">+91 9947789955</span></p>
-                    <p><i class="fa-solid fa-envelope"></i> <span
+                    <p><i class="fa-solid fa-phone fa-fw"></i> <span data-i18n="footer_phone">+91 9947789955</span></p>
+                    <p><i class="fa-solid fa-envelope fa-fw"></i> <span
                             data-i18n="footer_email">royaraofficial@gmail.com</span></p>
                 </div>
                 <div class="footer-map">

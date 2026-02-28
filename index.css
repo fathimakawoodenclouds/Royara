@@ -231,6 +231,10 @@ nav.scrolled .nav-logo {
     height: 7.5rem;
 }
 
+nav.scrolled .nav-tm {
+    right: 24% !important;
+}
+
 .nav-links {
     display: flex;
     gap: 3rem;
@@ -1229,7 +1233,7 @@ footer::before {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.3fr 0.8fr 1.5fr 1.4fr;
     gap: 4rem;
     margin-bottom: 6rem;
 }
@@ -1261,10 +1265,14 @@ footer::before {
 .footer-map h3 {
     color: var(--metallic-gold);
     /* Headers changed to metallic gold as requested */
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 0.8rem;
+}
+
+.footer-contact-heading {
+    margin-left: 1.75rem;
 }
 
 .footer-links h3::after,
@@ -1424,6 +1432,16 @@ footer::before {
         width: auto;
     }
 
+    .nav-tm {
+        right: 35% !important;
+        top: 38% !important;
+        font-size: 0.6rem !important;
+    }
+
+    nav.scrolled .nav-tm {
+        display: none !important;
+    }
+
     .hamburger {
         display: block;
         margin-right: 0.5rem;
@@ -1486,6 +1504,11 @@ footer::before {
     section {
         padding: 5rem 5%;
     }
+
+    #footer-socials {
+        margin-left: 0 !important;
+        justify-content: flex-start;
+    }
 }
 
 /* Extra Small Devices (iPhone SE, etc.) */
@@ -1521,9 +1544,12 @@ footer::before {
     }
 
     .footer-marketing {
-        font-size: 0.9rem !important;
-        white-space: nowrap;
+        white-space: normal;
         display: block !important;
+    }
+
+    .footer-contact-heading {
+        margin-left: 0;
     }
 }
 
