@@ -68,6 +68,7 @@ const translations = {
         "footer_address": "Green Leaf Trading Company,<br>12/640 White House Bldg., Chettukuzhy, Vandamedu, Idukki-685552, Kerala, India",
         "footer_phone": "+91 9947789955",
         "footer_email": "royaraofficial@gmail.com",
+        "footer_fssai": "FSSAI Lic. No: 11325999000473",
         "footer_credits": "Designed by Woodenclouds Pvt Ltd",
         "footer_map_title": "Find Us"
     },
@@ -140,6 +141,7 @@ const translations = {
         "footer_address": "شركة جرين ليف التجارية،<br>12/640 مبنى وايت هاوس، تشيتوكوزي، فانداميدو، إيدوكي-685552، ولاية كيرالا، الهند",
         "footer_phone": "+91 9947789955",
         "footer_email": "royaraofficial@gmail.com",
+        "footer_fssai": "رقم ترخيص FSSAI: 11325999000473",
         "footer_credits": "Designed by Woodenclouds Pvt Ltd",
         "footer_map_title": "موقعنا"
     }
