@@ -287,6 +287,31 @@ nav:not(.scrolled) .hamburger {
     color: var(--metallic-gold);
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#lang-toggle {
+    text-decoration: none;
+    color: var(--royal-green-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-premium);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 55, 31, 0.1);
+    border-radius: 4px;
+}
+
+#lang-toggle:hover {
+    color: var(--metallic-gold);
+    border-color: var(--metallic-gold);
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -1464,8 +1489,17 @@ footer::before {
 
     .hamburger {
         display: block;
-        margin-right: 0.5rem;
+        margin-right: -1rem;
         /* Move hamburger a little bit to the left side */
+    }
+
+    .nav-right {
+        gap: 1rem;
+    }
+
+    #lang-toggle {
+        padding: 0.3rem 0.6rem;
+        font-size: 1rem;
     }
 
     .nav-links {
