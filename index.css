@@ -228,7 +228,7 @@ nav.hide {
 }
 
 nav.scrolled .nav-logo {
-    height: 7.5rem;
+    height: 9rem;
 }
 
 nav.scrolled .nav-tm {
@@ -1242,6 +1242,7 @@ footer::before {
     height: 12.5rem;
     /* 200px */
     margin-top: -2.5rem;
+    margin-left: -5rem;
     margin-bottom: 0.5rem;
     filter: brightness(0) invert(1);
     /* Make logo white for dark theme */
@@ -1425,6 +1426,12 @@ footer::before {
         margin-left: -6rem;
         filter: none;
         /* Remove white shadow on mobile */
+    }
+
+    nav.scrolled .nav-logo {
+        height: 6rem;
+        width: auto;
+        margin-left: -1.5rem;
     }
 
     .our-grades-preview {
