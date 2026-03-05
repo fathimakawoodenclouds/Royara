@@ -1492,6 +1492,12 @@ footer::before {
         font-size: 0.6rem !important;
     }
 
+    .sizes-image {
+        max-height: 180px;
+        width: auto !important;
+        margin: 0 auto 1rem;
+    }
+
     nav.scrolled .nav-tm {
         display: none !important;
     }
