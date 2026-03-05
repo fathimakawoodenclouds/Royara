@@ -242,6 +242,7 @@ nav.scrolled .nav-tm {
     background: transparent;
     padding: 1.2rem 3rem;
     transition: var(--transition-premium);
+    margin-left: auto;
 }
 
 nav.scrolled .nav-links {
@@ -1327,6 +1328,14 @@ footer::before {
     padding-left: 10px;
 }
 
+.footer-tm {
+    position: absolute;
+    right: 31%;
+    top: 18%;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
 .footer-contact p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 1.1rem;
@@ -1487,6 +1496,13 @@ footer::before {
         display: none !important;
     }
 
+    nav.scrolled .nav-tm-scrolled {
+        display: block !important;
+        right: 26% !important;
+        top: 33% !important;
+        font-size: 0.5rem !important;
+    }
+
     .hamburger {
         display: block;
         margin-right: -1rem;
@@ -1570,6 +1586,11 @@ footer::before {
     #footer-socials {
         margin-left: 0 !important;
         justify-content: flex-start;
+    }
+
+    .footer-tm {
+        right: 32% !important;
+        top: 20% !important;
     }
 }
 
