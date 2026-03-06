@@ -913,10 +913,17 @@ section {
     }
 }
 
-/* Move bag down in desktop view only */
 @media (min-width: 993px) {
     .packaging-image img {
-        margin-top: 50px;
+        margin-top: 40px;
+    }
+
+    .packaging {
+        padding: 5rem 0 2rem 0;
+    }
+
+    .products {
+        padding: 6rem 10%;
     }
 }
 
