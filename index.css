@@ -848,35 +848,7 @@ section {
     }
 }
 
-.packaging-accent-wrapper {
-    position: absolute;
-    right: -2%;
-    bottom: -7%;
-    width: 250px;
-    max-width: 35vw;
-    z-index: 0;
-    pointer-events: none;
-}
 
-.packaging-accent {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
-    transition: transform 0.1s ease-out;
-    /* Smooth out the scroll */
-}
-
-@keyframes floatPackagingAccent {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(-5deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(5deg);
-    }
-}
 
 .packaging-grid {
     display: grid;
@@ -1132,34 +1104,7 @@ section {
     overflow: hidden;
 }
 
-.floating-accent-grades-wrapper {
-    position: absolute;
-    bottom: -10%;
-    left: -10%;
-    width: 450px;
-    max-width: 50vw;
-    z-index: 0;
-    pointer-events: none;
-    transition: transform 0.1s ease-out;
-}
 
-.floating-accent-grades {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(20px 20px 30px rgba(0, 43, 26, 0.15));
-    animation: rotateGradesAccent 45s linear infinite;
-    opacity: 0.9;
-}
-
-@keyframes rotateGradesAccent {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .our-grades-preview .container {
     display: grid;
